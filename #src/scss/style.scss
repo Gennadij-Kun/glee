@@ -2,7 +2,6 @@
 @import "fonts";
 //</Подключаем шрифты>=======================================================================================
 
-
 //<Шрифт по умолчанию>==========================================================================================
 $fontFamily: "DMSans";
 //</Шрифт по умолчанию>==========================================================================================
@@ -17,7 +16,7 @@ $md1: $maxWidthContainer + 30;
 $md2: 991.98;
 $md3: 767.98;
 $md4: 479.98;
-// 
+//
 //</ПЕРЕМЕННЫЕ>===========================================================================================================
 
 //<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
@@ -70,9 +69,82 @@ body {
 	flex: 1 1 auto;
 }
 //</ОСНОВНОЙ БЛОК>====================================================================================================
-
-
+.blue-btn::after {
+  content: url("../images/icons/arrow-right.svg");
+	display: block;
+	position: absolute;
+	width: 22px;
+	height: 9px;
+	top: 0;
+	right: 18px;
+  
+	z-index: 1;
+}
 
 .intro {
 	background-color: $orange;
+	padding: 100px 0 85px;
+	&__container {
+		width: 1400px;
+		margin: 0 auto;
+	}
+	&__slider-wrapper {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__slider-content {
+		width: 50%;
+	}
+	&__slider-content-inner {
+		padding-top: 123px;
+		padding-left: 115px;
+		padding-right: 150px;
+	}
+	&__slider-bg {
+		width: 50%;
+		position: relative;
+		margin-left: 65px;
+		width: 635px;
+		height: 635px;
+		border-radius: 50%;
+		background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+	}
+
+	&__slider-img {
+		position: absolute;
+		top: 185px;
+		right: 100px;
+	}
+	&__slider-title {
+		@extend %rubik-500;
+		font-size: 72px;
+		line-height: 70px;
+		color: $blue-darck;
+
+		margin-bottom: 18px;
+	}
+	&__slider-text {
+		@extend %rubik-400;
+		font-size: 18px;
+		line-height: 30px;
+		color: $blue-midle;
+
+		margin-bottom: 30px;
+	}
 }
+
+.blue-btn {
+	position: relative;
+	@extend %rubik-500;
+	font-size: 15px;
+	color: #fff;
+	line-height: 60px;
+	display: inline-block;
+	height: 60px;
+	width: 200px;
+	background-color: $blue-light;
+	padding-left: 27px;
+}
+
+
+
