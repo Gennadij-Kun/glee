@@ -17,6 +17,10 @@ $(function () {
     arrows: false,
     slidesToShow: 1,
     slidesToScroll: 1,
+    infinite: true,
+    autoplay: true,
+    speed: 300,
+    fade: true,
     // appendDots:$('.blog__slider-dots')
   });
 
@@ -24,7 +28,7 @@ $(function () {
   //   $('.header__top-inner').toggleClass('header__top-inner--active')
   // })
   
-  
-  // var mixer = mixitup('.gallery__content');
+  @@include('mixitup.js');
+  var mixer = mixitup('.products__items-wrapper');
   
 });
