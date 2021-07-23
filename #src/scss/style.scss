@@ -1,5 +1,15 @@
 @import "mixins";
 @import "fonts";
+@import "jquery.fancybox.min";
+@import "slick";
+
+@function max($numbers...) {
+@return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+@return m#{i}n(#{$numbers});
+}
+
 //</Подключаем шрифты>=======================================================================================
 
 //<Шрифт по умолчанию>==========================================================================================
@@ -230,13 +240,14 @@ body {
 }
 
 .products {
-	padding: 50px 0;
+	padding-top: 75px;
+	padding-bottom: 0;
 	&__category-list {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 
-		margin-top: 35px;
+		margin-top: 30px;
 	}
 	&__category-name {
 		@extend %dmsans-700;
@@ -245,7 +256,7 @@ body {
 		color: $grey;
 		transition: color 0.2s linear;
 		cursor: pointer;
-		&--active,
+		&.mixitup-control-active,
 		&:hover {
 			color: $black;
 		}
@@ -260,6 +271,7 @@ body {
 		grid-row-gap: 40px;
 
 		margin-top: 45px;
+		margin-bottom: 85px;
 	}
 	&__item {
 		position: relative;
@@ -334,3 +346,164 @@ body {
 		background-color: $blue-light;
 	}
 }
+
+.topsales {
+	padding: 100px 0 50px;
+	&__wrapper {
+		max-width: 1800px;
+		min-height: 145px;
+		padding: 0 15px;
+		margin: 0 auto;
+	}
+	&__items{
+		
+		display: flex;
+		justify-content: space-between;
+		gap: 30px;
+	}
+	&__item{
+		display: flex;
+		justify-content: center;
+		max-width: 870px;
+		width: 100%;
+		background-color: rgba($orange, 0.4);
+
+		padding-top: 85px;
+		padding-bottom: 85px;
+		// margin-top: 100px;
+	}
+	&__content{
+		position: relative;
+		width: 605px;
+		padding-left: 285px;
+		color: $blue-darck;
+	}
+	&__photo{
+		position: absolute;
+		top: -180px;
+		left: 0;
+	}
+	&__title{
+		@extend %dmsans-700;
+		font-size: 26px;
+		line-height: 1.23;
+		
+		margin-bottom: 30px;
+	}
+	&__text{
+		@extend %rubik-400;
+		font-size: 16px;
+		line-height: 1.87;
+
+		margin-bottom: 30px;
+	}
+	&__link{
+		position: relative;
+
+		display: inline-block;
+		padding: 24px 86px 24px 20px;
+		border: 1px solid $blue-darck;
+		border-radius: 5px;
+
+		@extend %rubik-500;
+		font-size: 15px;
+		line-height: 12px;
+		color: $blue-midle;
+
+		&::after{
+			content: url('../images/icons/arrow-right-darck-blue.svg');
+			position: absolute;
+			right: 20px;
+		}
+	}
+}
+
+.design {
+	padding: 50px 0;
+	&__category-list {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		margin-top: 30px;
+	}
+	&__category-name {
+		@extend %dmsans-700;
+		font-size: 16px;
+		line-height: 1.2;
+		color: $grey;
+		transition: color 0.2s linear;
+		cursor: pointer;
+		&.mixitup-control-active,
+		&:hover {
+			color: $black;
+		}
+	}
+	&__category-name + .design__category-name {
+		margin-left: 32px;
+	}
+	&__items-wrapper {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-column-gap: 30px;
+		grid-row-gap: 30px;
+
+		margin-top: 68px;
+		margin-bottom: 85px;
+	}
+	&__item {
+		position: relative;
+		padding: 38px 160px 40px 35px;
+		width: 370px;
+		height: 246px;
+		
+	}
+	
+	&__item-photo {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: -1;
+		display: block;
+		max-width: 370px;
+		object-fit: cover;
+		
+	}
+	
+	&__item-name {
+		@extend %dmsans-700;
+		font-size: 20px;
+		line-height: 1.2;
+
+		margin-bottom: 15px;
+	}
+	&__item-style {
+		@extend %dmsans-700;
+		font-size: 16px;
+		line-height: 1.2;
+		color: $blue-light;
+	}
+}
+
+.video{
+	&__wrapper{
+		max-height: 500px;
+		height: 500px;
+		background-image: url('../images/video-bg.jpg');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+
+
+
+
+

@@ -1,4 +1,9 @@
+@@include('jquery-3.6.0.min.js');
+@@include('jquery.fancybox.min.js');
 $(function () {
+  @@include('slick.min.js');
+
+  
 
   //Плавный скролл
   // $(".menu a, .footer__logo-link").on("click", function (event) {
@@ -27,8 +32,14 @@ $(function () {
   // $('.menu__btn, .menu__list').on('click', function(){
   //   $('.header__top-inner').toggleClass('header__top-inner--active')
   // })
+
   
   @@include('mixitup.js');
   var mixer = mixitup('.products__items-wrapper');
+  var mixer = mixitup('.design__items-wrapper');
+
+  $('.design__category-list', '.design__category-name').on('click', function(){
+    $('.design__category-name').toggleClass('design__category-name--active')
+  });
   
 });
