@@ -8,26 +8,31 @@ $blue-darck: #243f4d;
 $blue-midle: #436372;
 
 
+// @extend %dmsans-400;
 %dmsans-400 {
   font-family: "DMSans", sans-serif;
   font-weight: 400;
 }
 
+// @extend %dmsans-500;
 %dmsans-500 {
   font-family: "DMSans", sans-serif;
   font-weight: 500;
 }
 
+// @extend %dmsans-700;
 %dmsans-700 {
   font-family: "DMSans", sans-serif;
   font-weight: 700;
 }
 
+// @extend %poppins-700;
 %poppins-700 {
   font-family: "Poppins-Bold", sans-serif;
   font-weight: 700;
 }
 
+// @extend %rubik-400;
 %rubik-400 {
   font-family: "Rubik-Regular", sans-serif;
   font-weight: 400;
