@@ -31,6 +31,7 @@
 
   // .footer__item-title
   &__item-title {
+    @extend %dmsans-400;
     font-size: 16px;
     font-family: DMSans, sans-serif;
     color: #1f2044;
@@ -46,11 +47,13 @@
   &__form {
     display: flex;
     margin-top: 30px;
-    font-family: DMSans, sans-serif;
+    @extend %dmsans-400;
   }
 
   // .footer__form-input
   &__form-input {
+    @extend %dmsans-400;
+    font-size: 14px;
     display: inline-block;
     width: 100%;
     padding: 12px 15px;
@@ -59,7 +62,7 @@
     &::placeholder{
       font-size: 12px;
       font-weight: 400;
-      // font-family: DMSans, sans-serif;
+      @extend %dmsans-400;
       color: #234969;
       line-height: 1.2;
     }
@@ -67,6 +70,7 @@
 
   // .footer__form-btn
   &__form-btn {
+    @extend %dmsans-400;
     display: inline-block;
     padding: 12px 17px;
     color: #fff;

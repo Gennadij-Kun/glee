@@ -1,0 +1,52 @@
+.blue-btn {
+	position: relative;
+	@extend %rubik-500;
+	font-size: 15px;
+	color: #fff;
+	line-height: 60px;
+	display: inline-block;
+	height: 60px;
+	width: 200px;
+	background-color: $blue-light;
+	padding-left: 27px;
+}
+
+.blue-btn::after {
+	content: url("../images/icons/arrow-right.svg");
+	display: block;
+	position: absolute;
+	width: 22px;
+	height: 9px;
+	top: 0;
+	right: 18px;
+	z-index: 1;
+}
+
+.slick-dots {
+	display: flex;
+	justify-content: center;
+	margin-top: 15px;
+}
+.slick-dots button {
+	@extend %rubik-500;
+	font-size: 11px;
+	color: $blue-darck;
+
+	margin: 0 6px;
+	width: 29px;
+	height: 29px;
+	border-radius: 50%;
+	background-color: #fff;
+	opacity: 0.3;
+}
+.slick-active button {
+	opacity: 1;
+}
+
+.title{
+	@extend %dmsans-700;
+	font-size: 36px;
+	line-height: 1.2;
+	text-align: center;
+	color: $black;
+}
