@@ -1,9 +1,44 @@
 @@include('jquery-3.6.0.min.js');
 @@include('jquery.fancybox.min.js');
+@@include('ion.rangeSlider.min.js');
+@@include('jquery.rateyo.min.js');
+
 $(function () {
   @@include('slick.min.js');
 
-  
+  $('.filter-price__input').ionRangeSlider({
+    type: "double",
+    prefix: "$",
+    prettify_enabled: true,
+    prettify_separator: ".",
+    step: 0.01,
+    onStart: function (data){
+      $('.filter-price__from').text(data.from_pretty);
+      $('.filter-price__to').text(data.to_pretty);
+    },
+    onChange: function (data) {
+      $('.filter-price__from').text(data.from_pretty);
+      $('.filter-price__to').text(data.to_pretty);
+  },
+  });
+
+
+  $(".recent__stars").rateYo({
+    starWidth: "12px",
+    normalFill: "#d6d6d6",
+    ratedFill: "#ffcc00",
+    spacing: "8px",
+    readOnly: true
+  });
+
+
+
+
+
+
+
+
+
 
   //Плавный скролл
   // $(".menu a, .footer__logo-link").on("click", function (event) {

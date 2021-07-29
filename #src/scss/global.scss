@@ -39,7 +39,7 @@
 	display: inline-block;
 	height: 60px;
 	width: 200px;
-	background-color: $blue-light;
+	background-color: $accent;
 	padding-left: 27px;
 }
 
@@ -62,7 +62,7 @@
 .slick-dots button {
 	@extend %rubik-500;
 	font-size: 11px;
-	color: $blue-darck;
+	color: $title;
 
 	margin: 0 6px;
 	width: 29px;
