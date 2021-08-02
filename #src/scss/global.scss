@@ -1,3 +1,4 @@
+// ===== Breadcrumbs =======
 .breadcrumbs {
 	display: inline-flex;
 	justify-content: center;
@@ -27,6 +28,44 @@
 	}
 	&__link {
 		color: inherit;
+	}
+}
+
+// ===== Pagination =======
+.pagination {
+	&__inner {
+		display: flex;
+		justify-content: center;
+	}
+	&__list {
+		display: flex;
+	}
+	&__item + .pagination__item {
+		margin-left: 15px;
+	}
+	&__link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 50px;
+		height: 50px;
+		background: #fff;
+		border: 1px solid $accent;
+
+		@extend %rubik-400;
+		font-size: 16px;
+		color: $title;
+		transition: all .3s linear;
+
+		&--active,
+		&:hover {
+			background-color: $accent;
+			color: #fff;
+		}
+
+		&--next {
+			width: 75px;
+		}
 	}
 }
 
@@ -82,3 +121,5 @@
 	text-align: center;
 	color: $black;
 }
+
+

@@ -389,7 +389,7 @@ body {
 		grid-row-gap: 40px;
 
 		margin-top: 45px;
-		margin-bottom: 85px;
+		margin-bottom: 108px;
 	}
 	&__item {
 		position: relative;
@@ -1197,7 +1197,7 @@ body {
 // ===== Product 1 =====
 
 .shop {
-	padding: 115px 0 125px;
+	padding: 115px 0 120px;
 	&__inner {
 		display: flex;
 	}
@@ -1345,10 +1345,10 @@ body {
 		padding: 17px 25px 17px 15px;
 		display: flex;
 		justify-content: space-between;
-		
+
 		background-color: transparent;
 		border-radius: 5px;
-		
+
 		@extend %rubik-400;
 		font-size: 16px;
 		color: $title;
@@ -1356,18 +1356,18 @@ body {
 }
 
 //===== Recent products =====
-.recent{
-	&__item-inner{
+.recent {
+	&__item-inner {
 		padding-top: 20px;
 	}
-	&__item{
+	&__item {
 		margin-bottom: 25px;
-		&:last-child{
+		&:last-child {
 			margin-bottom: 0;
 		}
 		display: flex;
 	}
-	&__image-box{
+	&__image-box {
 		margin-right: 20px;
 
 		display: flex;
@@ -1379,40 +1379,40 @@ body {
 		border: 2px solid #f2f2f2;
 		background-color: #fefefe;
 	}
-	&__img{
+	&__img {
 		object-fit: cover;
 	}
-	&__item-info{
+	&__item-info {
 		@extend %rubik-400;
 		color: #333;
 	}
-	&__item-title{
+	&__item-title {
 		margin-bottom: 11px;
 
 		font-size: 14px;
 	}
-	
-	&__stars{
-		margin-bottom: 11px;
 
+	&__stars {
+		margin-bottom: 11px;
 	}
-	.jq-ry-container{
+	.jq-ry-container {
 		padding: 0;
 	}
 
-	&__item-price{
+	&__item-price {
 		font-size: 15px;
 	}
 }
 
+.shop__content {
+	.products__items-wrapper {
+		margin-top: 0;
 
-
-
-
-
-
-
-
-
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-column-gap: 30px;
+		grid-row-gap: 40px;
+	}
+}
 
 

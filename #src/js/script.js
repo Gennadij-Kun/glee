@@ -2,9 +2,10 @@
 @@include('jquery.fancybox.min.js');
 @@include('ion.rangeSlider.min.js');
 @@include('jquery.rateyo.min.js');
+@@include('slick.min.js');
+@@include('mixitup.js');
 
 $(function () {
-  @@include('slick.min.js');
 
   $('.filter-price__input').ionRangeSlider({
     type: "double",
@@ -68,8 +69,13 @@ $(function () {
   //   $('.header__top-inner').toggleClass('header__top-inner--active')
   // })
 
+  // Pagination
+  $('.pagination__link').on('click', function(){
+    $('.pagination__link').toggleClass('pagination__link--active')
+  })
+
   
-  @@include('mixitup.js');
+  
   var mixer = mixitup('.products__items-wrapper');
   var mixer = mixitup('.design__items-wrapper');
 
