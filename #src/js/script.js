@@ -32,6 +32,14 @@ $(function () {
     readOnly: true
   });
 
+  $(".products-2__stars").rateYo({
+    starWidth: "20px",
+    normalFill: "#d6d6d6",
+    ratedFill: "#ffcc00",
+    spacing: "12px",
+    readOnly: true
+  });
+
 
 
 
