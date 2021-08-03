@@ -1422,6 +1422,10 @@ body {
 }
 
 .products-2 {
+	&__items-wrapper{
+		padding-bottom: 35px;
+	}
+	
 	&__item {
 		margin-bottom: 40px;
 		width: 870px;

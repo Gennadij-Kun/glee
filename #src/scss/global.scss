@@ -67,6 +67,12 @@
 			width: 75px;
 		}
 	}
+	
+	&__shop-2{
+		.pagination__inner{
+			justify-content: flex-start;
+		}
+	}
 }
 
 .blue-btn {

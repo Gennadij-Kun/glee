@@ -78,9 +78,9 @@ $(function () {
   // })
 
   // Pagination
-  $('.pagination__link').on('click', function(){
-    $('.pagination__link').toggleClass('pagination__link--active')
-  })
+  // $('.pagination__link').on('click', function(){
+  //   $('.pagination__link').toggleClass('pagination__link--active')
+  // })
 
   
   
