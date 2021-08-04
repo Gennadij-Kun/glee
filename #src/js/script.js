@@ -3,6 +3,7 @@
 @@include('ion.rangeSlider.min.js');
 @@include('jquery.rateyo.min.js');
 @@include('slick.min.js');
+@@include('jquery.formstyler.min.js');
 @@include('mixitup.js');
 
 $(function () {
@@ -40,13 +41,20 @@ $(function () {
     readOnly: true
   });
 
+  $(".details__stars").rateYo({
+    starWidth: "20px",
+    normalFill: "#d6d6d6",
+    ratedFill: "#ffcc00",
+    spacing: "12px",
+    readOnly: true
+  });
+
+
+  $('.details__input').styler();
 
 
 
-
-
-
-
+  
 
 
   //Плавный скролл
@@ -73,6 +81,25 @@ $(function () {
     // appendDots:$('.blog__slider-dots')
   });
 
+  $('.details__big-slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.details__small-slider'
+  });
+  $('.details__small-slider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: '.details__big-slider',
+    dots: false,
+    vertical: true,
+    centerPadding: '0px',
+    draggable: false,
+    centerMode: true,
+    focusOnSelect: true
+  });
+
   // $('.menu__btn, .menu__list').on('click', function(){
   //   $('.header__top-inner').toggleClass('header__top-inner--active')
   // })
@@ -81,6 +108,17 @@ $(function () {
   // $('.pagination__link').on('click', function(){
   //   $('.pagination__link').toggleClass('pagination__link--active')
   // })
+
+  //Tabs
+  $('.tabs__title-link').on('click', function(e){
+    e.preventDefault();
+    console.log("click");
+    $('.tabs__title-link').removeClass('tabs__title-link--active');
+    $(this).addClass('tabs__title-link--active');
+
+    $('.tabs__content-item').removeClass('tabs__content-item--active');
+    $($(this).attr('href')).addClass('tabs__content-item--active');
+  });
 
   
   
