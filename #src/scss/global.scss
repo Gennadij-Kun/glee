@@ -14,14 +14,14 @@
 
 		padding-right: 20px;
 		position: relative;
-		&::after{
+		&::after {
 			content: "/";
 			position: absolute;
 			right: 7px;
 		}
-		&:last-child{
+		&:last-child {
 			padding-right: 0;
-			&::after{
+			&::after {
 				display: none;
 			}
 		}
@@ -55,7 +55,7 @@
 		@extend %rubik-400;
 		font-size: 16px;
 		color: $title;
-		transition: all .3s linear;
+		transition: all 0.3s linear;
 
 		&--active,
 		&:hover {
@@ -67,9 +67,10 @@
 			width: 75px;
 		}
 	}
-	
-	&__shop-2{
-		.pagination__inner{
+
+	&__shop-2,
+	&__blog {
+		.pagination__inner {
 			justify-content: flex-start;
 		}
 	}
@@ -127,5 +128,3 @@
 	text-align: center;
 	color: $black;
 }
-
-
