@@ -60,7 +60,7 @@
 		&--active,
 		&:hover {
 			background-color: $accent;
-			color: #fff;
+			color: #fff !important;
 		}
 
 		&--next {
