@@ -2550,8 +2550,35 @@ body {
 
 .pages__list{
 	padding-top: 100px;
-	&__list-items{
-		text-align: center;
+	&-items{
+		padding: 20px 0;
+		background-color: $bg;
+	}
+	&-item{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 10px 0;
+		font-size: 20px;
+		background-color: $bg;
+		transition: background-color .3s linear;
+		&:hover{
+			background-color: $accent;
+			.pages__list-link{
+				color: #f6f6f6;
+			}
+		}
+	}
+	&-link{
+		display: block;
+		@extend %rubik-500;
+		color: $title;
+		transition: color .3s linear;
+		&:hover{
+			color: #f6f6f6;
+		}
+
+		
 	}
 }
 
