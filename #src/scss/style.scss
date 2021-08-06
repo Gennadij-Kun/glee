@@ -1833,6 +1833,10 @@ body {
 	}
 }
 
+.blog.blog__details{
+	padding-bottom: 45px;
+}
+
 .search {
 	margin-bottom: 55px;
 	&__form {
@@ -1930,6 +1934,7 @@ body {
 	}
 	&__img-box {
 		position: relative;
+		margin-bottom: 35px;
 	}
 	&__main-img {
 		margin-bottom: 45px;
@@ -2252,29 +2257,92 @@ body {
 			right: -30px;
 		}
 	}
+
+
+
+	// === Leave A Comment Form ===
 	&__form-box{
 		padding-top: 70px;
 	}
-
-	&__form{
-		display: block;
-		width: 830px;
+	&__leave{
+		margin-bottom: 45px;
 	}
-	&__form-input-inner{
+
+	&__input-inner{
+		margin-bottom: 20px;
+
 		display: flex;
-		max-width: 100%;
+		max-width: 830px;
+		width: 100%;
 		justify-content: space-between;
 
 	}
-	&__form input, 
+	&__form input,
 	&__form textarea {
-		border: 1px solid #000;
-		width: 400px;
+		border: 1px solid rgba(#000, .1);
+		@extend %rubik-400;
+		font-size: 16px;
+		color: #333;
+		transition: border-color .3s linear;
+		&::placeholder{
+			position: relative;
+			color: #999;
+		}
 
+		
+
+		&:focus{
+			border-color: $accent;
+		}
+	}
+
+	&__form-input-name {
+		background: url('../images/icons/form-user.svg') 95% 50% no-repeat;
+	}
+	&__form-input-email {
+		background: url('../images/icons/form-letter.svg') 95% 50% no-repeat;
+	}
+	&__form-textarea {
+		background: url('../images/icons/form-comment.svg') 97.7% 19% no-repeat;
+	}
+
+
+	
+	&__form input {
+		padding: 15px 50px 15px 20px;
+
+		max-width: 400px;
+		width: 100%;
+		height: 50px;
+
+		@extend %rubik-400;
+		font-size: 16px;
+		color: #333;
 	}
 	&__form-textarea{
+		margin-bottom: 40px;
+		padding: 15px 50px 15px 20px;
+
 		display: block;
 		width: 100%;
-	} 
+		height: 120px;
+		border: 1px solid rgba(#000, .1);
+		resize: none;
+	}
+	
+	&__form-btn{
+	display: inline-block;
+	@extend %rubik-400;
+	font-size: 14px;
+	line-height: 50px;
+	letter-spacing: 0.1em;
+	color: #fff;
+	height: 50px;
+	width: 190px;
+	background-color: $accent;
+	}
 	
 }
+
+
+
